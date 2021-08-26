@@ -6,10 +6,6 @@
 #include "Interpolate.h"
 #include <omp.h>
 
-// Pgrid HashMap[(nX+1)*(nY+1)*(nZ+1)];
-
-
-
 int main()
 {
     getTime();
@@ -46,7 +42,7 @@ int main()
     }
 
 #ifdef _DBUG
-        fprintf(stdout,"INPUT(n) : %d\n",DataSet.size());
+        fprintf(stdout,"INPUT(n) : %ld\n",DataSet.size());
 #endif
 
     double pMax[PDIM],pMin[PDIM];

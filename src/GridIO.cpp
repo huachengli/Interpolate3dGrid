@@ -170,13 +170,13 @@ int ReadParam(char * sfile,_SETUP * s)
     Over(fp,5);
     fscanf(fp,"%d\n",&s->Nthread);
     Over(fp,1);
-    fscanf(fp,"%s\n",&s->DataSetPath);
+    fscanf(fp,"%s\n",s->DataSetPath);
     Over(fp,1);
-    fscanf(fp,"%s\n",&s->DataSetQPath);
+    fscanf(fp,"%s\n",s->DataSetQPath);
     Over(fp,1);
-    fscanf(fp,"%s\n",&s->DataOutCoor);
+    fscanf(fp,"%s\n",s->DataOutCoor);
     Over(fp,1);
-    fscanf(fp,"%s\n",&s->DataOutPath);
+    fscanf(fp,"%s\n",s->DataOutPath);
     Over(fp,1);
     fscanf(fp,"%d %lf %d\n",&s->ndata,&s->Lambda,&s->Kmin);
     Over(fp,1);
@@ -187,7 +187,6 @@ int ReadParam(char * sfile,_SETUP * s)
     if(NULL!=fp)
         fclose(fp);
     return ListDir(s->DataOutCoor,s->OutList);
-
 }
 
 int getTime()
